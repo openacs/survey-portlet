@@ -19,9 +19,14 @@ array set config $cf
 set shaded_p $config(shaded_p)
 set list_of_package_ids $config(package_id)
 
-set one_instance_p [ad_decode [llength $list_of_package_ids] 1 1 0]
-set can_read_private_data_p [acs_privacy::user_can_read_private_data_p -object_id [ad_conn package_id]]
 set user_id [ad_conn user_id]
-db_multirow surveys select_surveys {}
-
-
+set one_instance_p [ad_decode [llength $list_of_package_ids] 1 1 0]
+set readable_surveys_p 0
+set count 0
+db_multirow -extend {can_read_private_data_p} surveys select_surveys {} {
+  set can_read_private_data_p [acs_privacy::user_can_read_private_data_p -object_id $package_id]
+  if { $can_read_private_data_p } {
+    set readable_surveys_p 1
+  }
+  incr count
+}
