@@ -111,6 +111,7 @@ begin
 	foo := acs_sc_impl.new (
 		impl_contract_name => 'portal_datasource',
 		impl_name => 'survey_portlet',
+		impl_pretty_name => 'Survey portlet',
 		impl_owner_name => 'survey_portlet'
 	);
 
