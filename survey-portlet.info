@@ -7,12 +7,12 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>t</singleton-p>
 
-    <version name="2.0.2" url="http://openacs.org/repository/download/apm/survey-portlet-2.0.2.apm">
+    <version name="2.0.3" url="http://openacs.org/repository/download/apm/survey-portlet-2.0.3.apm">
         <owner url="mailto:dave@thedesignexperience.org">dave bauer</owner>
         <summary>Survey package portlet for new-portal</summary>
         <description format="text/html">Survey package portlet for new-portal</description>
 
-        <provides url="survey-portlet" version="2.0.2"/>
+        <provides url="survey-portlet" version="2.0.3"/>
         <requires url="new-portal" version="0.1a"/>
         <requires url="survey" version="0.1d"/>
 
