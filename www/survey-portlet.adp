@@ -18,26 +18,23 @@
 
 %>
 
-<if @can_read_private_data_p@>
-
-<if @surveys:rowcount@ gt 0>
+<if @surveys:rowcount@ gt 0 and @readable_surveys_p@ eq 1>
 	<multiple name="surveys">
-<if @one_instance_p@ false>@surveys.parent_name@
-<ul></if>
+<if @one_instance_p@ false>@surveys.parent_name@</if>
+<ul>
 
 <group column="package_id">
-    <if @surveys.response_count@ eq 0>
+    <if @surveys.response_count@ eq 0 and @surveys.can_read_private_data_p@>
 	  <li>
 	  <a href="@surveys.url@one-survey?survey_id=@surveys.survey_id@">@surveys.name@</a>
           </li>
     </if>
 </group>
 </ul>
-     <if @one_instance_p@><br /></if><a href="@surveys.url@">view/edit previous responses<if @one_instance_p@ eq 0> for surveys in this group</if></a><br /><br />
+     <if @one_instance_p@><br /></if><if @surveys.can_read_private_data_p@><a href="@surveys.url@">view/edit previous responses<if @one_instance_p@ eq 0> for surveys in this group</if></a><br /></if><br />
     </multiple>
 </if>      
-      <if @surveys:rowcount@ eq 0>
-	<li>No unanswered surveys</li>
-      </if>
 <else>
+	<small>No unanswered surveys</small>
+</else>
 </if>
