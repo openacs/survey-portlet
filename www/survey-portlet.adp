@@ -19,7 +19,6 @@
 %>
 
 <if @can_read_private_data_p@>
-<if @shaded_p@ false>
 
 <if @surveys:rowcount@ gt 0>
 	<multiple name="surveys">
@@ -41,5 +40,4 @@
 	<li>No unanswered surveys</li>
       </if>
 <else>
-</if>
 </if>
