@@ -32,7 +32,7 @@ namespace eval survey_admin_portlet {
 
     ad_proc -public get_pretty_name {
     } {
-	return "Survey Administration"
+	return "#survey.Survey_Administration#"
     }
 
     ad_proc -private my_package_key {
