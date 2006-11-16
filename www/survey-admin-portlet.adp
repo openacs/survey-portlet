@@ -25,8 +25,9 @@
 <if @surveys.enabled_p@ ne t><b style="color: #f00;">(disabled)</b></if>
   </li>
 </multiple>
-  <br>
+</ul>
+<ul>
   <li>
-    <a href="@url@admin/survey-create">New Survey</a>
+    <a href="@url@admin/survey-create">#survey.New_Survey#</a>
   </li>
 </ul>
