@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<message_catalog package_key="survey-portlet" package_version="2.2.0" locale="en_US" charset="ISO-8859-1">
+
+  <msg key="view_edit_previous_responses">View/Edit previous responses</msg>
+  <msg key="view_edit_previous_responses_for_surveys_in_this_group">View/Edit previous responses for surveys in this group</msg>
+</message_catalog>
