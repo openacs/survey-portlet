@@ -18,36 +18,23 @@
 
 %>
 
-<if @config.shaded_p@ ne "t">
-
 <if @surveys:rowcount@ gt 0 and @readable_surveys_p@ eq 1>
 	<multiple name="surveys">
-         <if @one_instance_p@ false>@surveys.parent_name@</if>
-         <ul>
+<if @one_instance_p@ false>@surveys.parent_name@</if>
+<ul>
 
-          <group column="package_id">
-           <if @surveys.response_count@ eq 0 and @surveys.can_read_private_data_p@>
-	    <li><a href="@surveys.url@one-survey?survey_id=@surveys.survey_id@">@surveys.name@</a></li>
-           </if>
-          </group>
-         </ul>
-         <if @one_instance_p@><br /></if>
-         <if @surveys.can_read_private_data_p@>
-            <a href="@surveys.url@">
-              <if @one_instance_p@ eq 0>
-                 <small>#survey-portlet.view_edit_previous_responses_for_surveys_in_this_group#</small>
-              </if>
-              <else>
-                 <small>#survey-portlet.view_edit_previous_responses#</small>
-              </else>
-            </a><br />
-         </if><br />
-        </multiple> 
+<group column="package_id">
+    <if @surveys.response_count@ eq 0 and @surveys.can_read_private_data_p@>
+	  <li>
+	  <a href="@surveys.url@one-survey?survey_id=@surveys.survey_id@">@surveys.name@</a>
+          </li>
+    </if>
+</group>
+</ul>
+     <if @one_instance_p@><br /></if><if @surveys.can_read_private_data_p@><a href="@surveys.url@">view/edit previous responses<if @one_instance_p@ eq 0> for surveys in this group</if></a><br /></if><br />
+    </multiple>
 </if>      
 <else>
-	<small>#survey.No_unanswered_surveys#</small>
+	<small>No unanswered surveys</small>
 </else>
 </if>
-<else>
-  <small>#new-portal.when_portlet_shaded#</small>
-</else>
