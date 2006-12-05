@@ -14,7 +14,7 @@
         <description format="text/html">Survey package portlet for new-portal</description>
 
         <provides url="survey-portlet" version="2.2.1a1"/>
-        <requires url="new-portal" version="2.2.0a1"/>
+        <requires url="new-portal" version="2.2.1a1"/>
         <requires url="survey" version="5.0.1"/>
 
         <parameters>
