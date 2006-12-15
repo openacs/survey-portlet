@@ -21,12 +21,13 @@
 <ul>
 <multiple name="surveys">
   <li>
-    <a href="@url@admin/one?survey_id=@surveys.survey_id@">@surveys.name@</a>
-<if @surveys.enabled_p@ ne t><b style="color: #f00;">(disabled)</b></if>
+    <a href="@url@admin/one?survey_id=@surveys.survey_id@" title="#survey.goto_surveys_name#">@surveys.name@</a>
+<if @surveys.enabled_p@ ne t><b style="color: #f00;">#survey.disabled#</b></if>
   </li>
 </multiple>
-  <br>
+</ul>
+<ul>
   <li>
-    <a href="@url@admin/survey-create">New Survey</a>
+    <a href="@url@admin/survey-create" title="#survey.New_Survey#">#survey.New_Survey#</a>
   </li>
 </ul>

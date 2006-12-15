@@ -26,15 +26,15 @@
 <group column="package_id">
     <if @surveys.response_count@ eq 0 and @surveys.can_read_private_data_p@>
 	  <li>
-	  <a href="@surveys.url@one-survey?survey_id=@surveys.survey_id@">@surveys.name@</a>
+	  <a href="@surveys.url@one-survey?survey_id=@surveys.survey_id@" title="#survey.goto_surveys_name#">@surveys.name@</a>
           </li>
     </if>
 </group>
 </ul>
-     <if @one_instance_p@><br /></if><if @surveys.can_read_private_data_p@><a href="@surveys.url@">view/edit previous responses<if @one_instance_p@ eq 0> for surveys in this group</if></a><br /></if><br />
+     <if @one_instance_p@><br /></if><if @surveys.can_read_private_data_p@><a href="@surveys.url@" title="#survey.view_edit_previous_responses#">#survey.view_edit_previous_responses#</a><br /></if><br />
     </multiple>
 </if>      
 <else>
-	<small>No unanswered surveys</small>
+	<small>#survey.No_unanswered_surveys#</small>
 </else>
 </if>
