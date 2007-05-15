@@ -18,10 +18,12 @@
 
 %>
 
+<if @config.shaded_p@ ne "t">
+
 <if @surveys:rowcount@ gt 0 and @readable_surveys_p@ eq 1>
 	<multiple name="surveys">
-<if @one_instance_p@ false>@surveys.parent_name@</if>
-<ul>
+         <if @one_instance_p@ false>@surveys.parent_name@</if>
+         <ul>
 
 <group column="package_id">
     <if @surveys.response_count@ eq 0 and @surveys.can_read_private_data_p@>
@@ -38,3 +40,6 @@
 	<small>#survey.No_unanswered_surveys#</small>
 </else>
 </if>
+<else>
+  <small>#new-portal.when_portlet_shaded#</small>
+</else>

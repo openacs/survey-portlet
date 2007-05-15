@@ -18,6 +18,7 @@
 
 %>
 
+<if @surveys:rowcount@ gt 0>
 <ul>
 <multiple name="surveys">
   <li>
@@ -26,6 +27,8 @@
   </li>
 </multiple>
 </ul>
+</if>
+
 <ul>
   <li>
     <a href="@url@admin/survey-create" title="#survey.New_Survey#">#survey.New_Survey#</a>
