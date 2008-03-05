@@ -33,7 +33,7 @@
     </if>
 </group>
 </ul>
-     <if @one_instance_p@><br /></if><if @surveys.can_read_private_data_p@><a href="@surveys.url@" title="#survey.view_edit_previous_responses#">#survey.view_edit_previous_responses#</a><br /></if><br />
+     <if @one_instance_p@><br></if><if @surveys.can_read_private_data_p@><a href="@surveys.url@" title="#survey.view_edit_previous_responses#">#survey.view_edit_previous_responses#</a><br></if><br>
     </multiple>
 </if>      
 <else>
